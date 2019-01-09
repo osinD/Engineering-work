@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIManager.AdminGUI.AdminGUIDangerTypeController">
+   <children>
+      <AnchorPane fx:id="addDangerPanel" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="887.0">
+         <children>
+            <Text fill="#757575" layoutX="23.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TABELA TYP ZAGROŻENIA">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="612.0" layoutY="74.0" minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="356.0" />
+            <Button fx:id="addDanger" layoutX="20.0" layoutY="504.0" mnemonicParsing="false" onAction="#handleAddingDanger" style="-fx-background-color: #8bc52d;" text="Dodaj nowy element" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteDanger" layoutX="20.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleDeleteDanger" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: #c2c2c2;" text="Usuń element" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifyDanger" layoutX="20.0" layoutY="593.0" mnemonicParsing="false" onAction="#handleModifyDanger" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: #c2c2c2;" text="Modyfikuj element" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="489.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa typu zagrożenia" wrappingWidth="356.00000536441803">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="dangerNameField" layoutX="489.0" layoutY="126.0" onAction="#getDangerName" prefHeight="39.0" prefWidth="201.0" promptText="Wprowadż nazwę zagrożenia" />
+            <Text layoutX="496.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Button fx:id="confirmChanges" layoutX="725.0" layoutY="504.0" mnemonicParsing="false" onAction="#handleConfirmChanges" style="-fx-background-color: #c2c2c2;" text="Zatwierdź zmiany" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="systemType" layoutX="20.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleSystemTypeButton" style="-fx-background-color: #8bc52d;" text="Tabela Typ Systemu Teleinformatycznego" textFill="WHITE" />
+            <Button fx:id="attributeType" layoutX="287.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleAttributeType" style="-fx-background-color: #8bc52d;" text="Tabela Atrybut Bezpieczenstwa Informacji" textFill="WHITE" />
+            <Button fx:id="securityType" layoutX="567.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleSecurityTypeButton" style="-fx-background-color: #8bc52d;" text="Tabela Typ Zabezpieczenia" textFill="WHITE" />
+            <TableView fx:id="dangerTable" layoutX="23.0" layoutY="106.0" prefHeight="365.0" prefWidth="332.0">
+              <columns>
+                
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

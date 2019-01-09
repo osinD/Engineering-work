@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIManager.AdminGUI.AdminGUISafetyAttribute">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="7.0" prefHeight="598.0" prefWidth="898.0">
+         <children>
+            <Button fx:id="systemType1" layoutX="30.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleSystemTypeButton" style="-fx-background-color: #8bc52d;" text="Tabela Typ Systemu Teleinformatycznego" textFill="WHITE" />
+            <Button fx:id="attributeType" layoutX="486.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleAttributeType" style="-fx-background-color: #8bc52d;" text="Tabela Typ Zabezpieczenia" textFill="WHITE" />
+            <Button fx:id="dangerType" layoutX="311.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleDangerTypeButton" style="-fx-background-color: #8bc52d;" text="Tabela Typ Zagrozenia" textFill="WHITE" />
+            <Button fx:id="addElement" layoutX="30.0" layoutY="526.0" mnemonicParsing="false" onAction="#handleAddingDanger" style="-fx-background-color: #8bc52d;" text="Dodaj nowy element" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Text fill="#757575" layoutX="16.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TABELA ATRYBUT BEZPIECZŃSTWA INFORMACJI">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="357.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa Atrybutu" wrappingWidth="183.00000536441803">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="elementNameField" layoutX="355.0" layoutY="106.0" onAction="#getNameField" prefHeight="39.0" prefWidth="183.0" promptText="Wprowadż nazwę" />
+            <Button fx:id="confirmChanges" layoutX="727.0" layoutY="526.0" mnemonicParsing="false" onAction="#handleConfirmChanges" style="-fx-background-color: #8bc52d;" text="Zatwierdź zmiany" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Text fill="#8bc52d" layoutX="26.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modyfikacja tej tabeli dla atrybutów poufnośći integralnośći i dostępności jest niemożliwa, ponieważ są  one elementem metodyki analizy ryzyka CRAMM. Bez tych atrybutów program mógłby nie działać poprawnie" wrappingWidth="330.25">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#8bc52d" layoutX="30.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutaj możesz dodać tylko nowy atrybut bezpieczeństwa informacji. Należy jednak zwrócić szczególną uwagę na wprowadzane wartości, ponieważ program może zatwierdzić błędne wartości a co za tym idzie proces analizy ryzya może zostać przeprowadzony niepoprawnie" wrappingWidth="330.25">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField layoutX="773.0" layoutY="164.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="827.0" layoutY="164.0" prefHeight="25.0" prefWidth="33.0" />
+            <TextField fx:id="elementNameField1" layoutX="565.0" layoutY="164.0" onAction="#getNameField" prefHeight="25.0" prefWidth="191.0" promptText="Wprowadż nazwę" />
+            <TextField fx:id="elementNameField2" layoutX="565.0" layoutY="201.0" onAction="#getNameField" prefHeight="25.0" prefWidth="191.0" promptText="Wprowadż nazwę" />
+            <Text layoutX="569.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa podzakresu" wrappingWidth="183.00000536441803">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField layoutX="773.0" layoutY="201.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="827.0" layoutY="201.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField fx:id="elementNameField11" layoutX="565.0" layoutY="269.0" onAction="#getNameField" prefHeight="25.0" prefWidth="191.0" promptText="Wprowadż nazwę" />
+            <TextField fx:id="elementNameField12" layoutX="565.0" layoutY="299.0" onAction="#getNameField" prefHeight="25.0" prefWidth="191.0" promptText="Wprowadż nazwę" />
+            <TextField fx:id="elementNameField13" layoutX="565.0" layoutY="332.0" onAction="#getNameField" prefHeight="25.0" prefWidth="191.0" promptText="Wprowadż nazwę" />
+            <TextField fx:id="elementNameField14" layoutX="565.0" layoutY="369.0" onAction="#getNameField" prefHeight="25.0" prefWidth="191.0" promptText="Wprowadż nazwę" />
+            <TextField fx:id="elementNameField15" layoutX="565.0" layoutY="401.0" onAction="#getNameField" prefHeight="25.0" prefWidth="191.0" promptText="Wprowadż nazwę" />
+            <TextField fx:id="elementNameField16" layoutX="565.0" layoutY="432.0" onAction="#getNameField" prefHeight="25.0" prefWidth="191.0" promptText="Wprowadż nazwę" />
+            <TextField fx:id="elementNameField17" layoutX="565.0" layoutY="233.0" onAction="#getNameField" prefHeight="25.0" prefWidth="191.0" promptText="Wprowadż nazwę" />
+            <TextField fx:id="elementNameField18" layoutX="565.0" layoutY="465.0" onAction="#getNameField" prefHeight="25.0" prefWidth="191.0" promptText="Wprowadż nazwę" />
+            <TextField layoutX="773.0" layoutY="233.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="774.0" layoutY="270.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="773.0" layoutY="299.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="773.0" layoutY="332.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="775.0" layoutY="369.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="775.0" layoutY="401.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="775.0" layoutY="432.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="775.0" layoutY="465.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="827.0" layoutY="235.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="827.0" layoutY="270.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="827.0" layoutY="299.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="827.0" layoutY="332.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="827.0" layoutY="369.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="827.0" layoutY="401.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="827.0" layoutY="432.0" prefHeight="19.0" prefWidth="33.0" />
+            <TextField layoutX="829.0" layoutY="465.0" prefHeight="19.0" prefWidth="33.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

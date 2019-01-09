@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIManager.UserGUI.UserGUIDangerTISystemAlertController">
+   <children>
+      <AnchorPane layoutY="14.0" prefHeight="209.0" prefWidth="410.0">
+         <children>
+            <Text fill="#ae3939" layoutX="20.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ups... nie połączono wszystkich zasobów z zagrożeniami" wrappingWidth="389.30078125">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="tryAgin" layoutX="118.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleTryAgin" prefHeight="44.0" prefWidth="160.0" style="-fx-background-color: #8bc52d;" text="Spróbuj ponownie" textFill="WHITE" />
+            <Text fill="#6b6b6b" layoutX="50.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raport zostanie wygenerowany w momencie aż wszystkie zasoby zostaną połączone z zagrożeniem" wrappingWidth="296.4296875">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

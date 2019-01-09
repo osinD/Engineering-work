@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" >
+   <children>
+      <AnchorPane layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="836.0">
+         <children>
+            <MenuBar layoutX="6.0" layoutY="2.0" style="-fx-background-color: #8bc52d;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Opcje">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Pomoc">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Button layoutY="100.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Skutki utraty wybranych zasobów" textFill="WHITE" />
+            <Button layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Wybór zasobów" textFill="WHITE" />
+            <Button layoutY="150.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Wybór zagrożeń" textFill="WHITE" />
+            <Button layoutY="200.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Wybór zabezpieczeń" textFill="WHITE" />
+            <Button layoutY="250.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #7c7676;" text="Podatności elementów na zagrożenia" textFill="WHITE" />
+            <Button fx:id="raportButton" layoutY="298.0" mnemonicParsing="false" onAction="#handleRaportButton" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Generacja Raportu" textFill="WHITE" />
+            <Text fill="#7c7676" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PODATNOŚĆ ZASOBÓW NA ZAGROŻENIA" wrappingWidth="541.6328125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#7c7676" layoutX="225.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ZASÓB">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="approveRisk" layoutX="646.0" layoutY="448.0" mnemonicParsing="false" onAction="#handleApproveRisk" prefHeight="39.0" prefWidth="172.0" style="-fx-background-color: #7c7676;" text="Dodaj element do listy ryzyk" textFill="WHITE" />
+            <Text fill="#7c7676" layoutX="444.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ZAGROŻENIE" wrappingWidth="194.00000488385558">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brak (0);" />
+            <Text layoutX="14.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Niski poziom (1-4);" wrappingWidth="107.52539706230164" />
+            <Text layoutX="14.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Średni poziom (5-7);" />
+            <Text layoutX="12.0" layoutY="573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wysoki poziom (8-9);" />
+            <Text layoutX="12.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ekstremalny poziom (10)." />
+            <Text layoutX="14.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Poziom podatności wyznaczany jest według następujących wartości" />
+            <ListView fx:id="systemList" layoutX="223.0" layoutY="81.0" prefHeight="358.0" prefWidth="194.0" />
+            <Button fx:id="systemChcek" layoutX="223.0" layoutY="448.0" mnemonicParsing="false" onAction="#handleSystemCheck" prefHeight="39.0" prefWidth="194.0" style="-fx-background-color: #7c7676;" text="Wybierz element" textFill="WHITE" />
+            <ListView fx:id="dangerList" layoutX="442.0" layoutY="81.0" prefHeight="358.0" prefWidth="200.0" />
+            <TextField fx:id="before" layoutX="658.0" layoutY="150.0" prefHeight="25.0" prefWidth="91.0" />
+            <TextField fx:id="after" layoutX="658.0" layoutY="238.0" prefHeight="25.0" prefWidth="91.0" />
+            <Text fill="#7c7676" layoutX="659.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRZED WPROWADZENIEM ZABEZPIECZEŃ" wrappingWidth="145.9999961555004">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#7c7676" layoutX="659.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PO WPROWADZENIU ZABEZPIECZEŃ" wrappingWidth="145.9999961555004">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#7c7676" layoutX="658.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PODATNOŚĆ" wrappingWidth="140.00000488385558">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

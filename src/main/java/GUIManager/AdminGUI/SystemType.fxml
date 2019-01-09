@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIManager.AdminGUI.AdminGUISystemTypeController">
+   <children>
+      <AnchorPane layoutX="5.0" prefHeight="598.0" prefWidth="898.0">
+         <children>
+            <Button fx:id="securityType" layoutX="487.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleSecurityTypeButton" style="-fx-background-color: #8bc52d;" text="Tabela Typ Zabezpieczenia" textFill="WHITE" />
+            <Button fx:id="attributeType" layoutX="30.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleAttributeType" style="-fx-background-color: #8bc52d;" text="Tabela Atrybut Bezpieczenstwa Informacji" textFill="WHITE" />
+            <Button fx:id="dangerType" layoutX="313.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleDangerTypeButton" style="-fx-background-color: #8bc52d;" text="Tabela Typ Zagrozenia" textFill="WHITE" />
+            <TableView fx:id="elementsTable" layoutX="30.0" layoutY="99.0" prefHeight="364.0" prefWidth="344.0" />
+            <Button fx:id="addElement" layoutX="30.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleAddingElement" style="-fx-background-color: #8bc52d;" text="Dodaj nowy element" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteElement" layoutX="30.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleDeleteElement" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: #c2c2c2;" text="Usuń element" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifyElement" layoutX="30.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleModifyElement" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: #c2c2c2;" text="Modyfikuj element" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Text fill="#757575" layoutX="30.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TABELA TYP SYSTEMU TELEINFORMATYCZNEGO">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="431.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa typu systemu" wrappingWidth="213.00000536441803">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="elementNameField" layoutX="431.0" layoutY="99.0" onAction="#getNameField" prefHeight="39.0" prefWidth="201.0" promptText="Wprowadż nazwę systemu" />
+            <Button fx:id="confirmChanges" layoutX="721.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleConfirmChanges" style="-fx-background-color: #c2c2c2;" text="Zatwierdź zmiany" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="431.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atrybut bezpieczeństwa informacji" wrappingWidth="394.00000536441803">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <MenuButton fx:id="menuAttributes" layoutX="431.0" layoutY="202.0" mnemonicParsing="false" text="Atrybut Bezpieczeństwa Informacji">
+              <items>
+                  <CheckMenuItem mnemonicParsing="false" text="Poufność" />
+                  <CheckMenuItem mnemonicParsing="false" text="Integralność" />
+                  <CheckMenuItem mnemonicParsing="false" text="Dostępność" />
+              </items>
+            </MenuButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

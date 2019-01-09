@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIManager.UserGUI.UserGUIDangerSecurity">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="836.0">
+         <children>
+            <MenuBar layoutX="6.0" layoutY="2.0" style="-fx-background-color: #8bc52d;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Opcje">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Pomoc">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Button layoutY="100.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Skutki utraty wybranych zasobów" textFill="WHITE" />
+            <Button layoutY="51.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Wybór zasobów" textFill="WHITE" />
+            <Button layoutY="150.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Wybór zagrożeń" textFill="WHITE" />
+            <Button layoutY="200.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #7c7676;" text="Wybór zabezpieczeń" textFill="WHITE" />
+            <Button fx:id="lastStage" layoutY="250.0" mnemonicParsing="false" onAction="#handleLastStage" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Podatności elementów na zagrożenia" textFill="WHITE" />
+            <Button layoutY="298.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Generacja Raportu" textFill="WHITE" />
+            <Text fill="#7c7676" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WYBÓR ZABEZPIECZEŃ" wrappingWidth="541.6328125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#7c7676" layoutX="318.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Możliwe zabezpieczenia">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="securityDangers" layoutX="352.0" layoutY="492.0" mnemonicParsing="false" onAction="#handleSetValues" prefHeight="39.0" prefWidth="194.0" style="-fx-background-color: #8bc52d;" text="Ustaw możliwe zabezpieczenia" textFill="WHITE" />
+            <MenuButton fx:id="dangerMenu" layoutX="318.0" layoutY="88.0" mnemonicParsing="false" onAction="#handleDangerMenu" prefHeight="25.0" prefWidth="262.0" text="Zagrożenia">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </MenuButton>
+            <Text fill="#7c7676" layoutX="318.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybrane zagrożenia">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <ListView fx:id="securityList" layoutX="318.0" layoutY="165.0" prefHeight="310.0" prefWidth="262.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIManager.UserGUI.UserGUISetLossController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="417.0">
+         <children>
+            <Text fill="#7c7676" layoutX="29.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SKUTKI UTRATY" wrappingWidth="541.6328125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="textToSet" fill="#7c7676" layoutX="29.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="541.6328125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#7c7676" layoutX="29.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poufność" wrappingWidth="541.6328125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <SplitMenuButton layoutX="29.0" layoutY="125.0" mnemonicParsing="false" text="Jawne (0)">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Zastrzeżone (1-3)" />
+                  <MenuItem mnemonicParsing="false" text="Poufne (4-5)" />
+                  <MenuItem mnemonicParsing="false" text="Tajne (6-7)" />
+                  <MenuItem mnemonicParsing="false" text="Ściśle Tajne (8-10)" />
+               </items>
+            </SplitMenuButton>
+            <TextField fx:id="first" layoutX="29.0" layoutY="167.0" prefHeight="25.0" prefWidth="90.0" />
+            <Text fill="#7c7676" layoutX="146.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Integralność" wrappingWidth="541.6328125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <SplitMenuButton layoutX="146.0" layoutY="125.0" mnemonicParsing="false" text="Niskie (1-3)">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Średnie (4-5)" />
+                  <MenuItem mnemonicParsing="false" text="Wysokie (6-7)" />
+                  <MenuItem mnemonicParsing="false" text="Bezwzględne (8-10)" />
+               </items>
+            </SplitMenuButton>
+            <TextField fx:id="second" layoutX="146.0" layoutY="167.0" prefHeight="25.0" prefWidth="90.0" />
+            <Text fill="#7c7676" layoutX="282.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dostępność" wrappingWidth="541.6328125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <SplitMenuButton layoutX="282.0" layoutY="125.0" mnemonicParsing="false" text="Niskie (1-3)">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Średnie wymagania (4-6)" />
+                  <MenuItem mnemonicParsing="false" text="Wysokie wymagania(7-8)" />
+                  <MenuItem mnemonicParsing="false" text="Ekstremalne wymagania (9)" />
+                  <MenuItem mnemonicParsing="false" text="Absolutne wymagania (10)" />
+               </items>
+            </SplitMenuButton>
+            <TextField fx:id="third" layoutX="282.0" layoutY="167.0" prefHeight="25.0" prefWidth="90.0" />
+            <Button fx:id="confirm" layoutX="112.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="39.0" prefWidth="194.0" style="-fx-background-color: #8bc52d;" text="Zatwierdź wartości" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

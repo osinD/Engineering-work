@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIManager.UserGUI.UserGUIController">
+   <children>
+      <AnchorPane layoutX="-194.0" layoutY="-216.0" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="816.0">
+         <children>
+            <MenuBar layoutX="125.0" layoutY="2.0" prefHeight="25.0" prefWidth="688.0" style="-fx-background-color: #8bc52d;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Opcje">
+                     <items>
+                        <MenuItem fx:id="adminSelect" mnemonicParsing="false" onAction="#handleAdmin" text="Tryb Administratora" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Pomoc">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Button fx:id="secondStage" layoutY="96.0" mnemonicParsing="false" onAction="#handleSecondStage" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Skutki utraty wybranych zasobów" textFill="WHITE" />
+            <Button fx:id="thirdStage" layoutY="145.0" mnemonicParsing="false" onAction="#handleThirdStage" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Wybór zagrożeń" textFill="WHITE" />
+            <Text fill="#7c7676" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WYBÓR ZASOBÓW SYSTEMU TELEINFORMATYCZNEGO" wrappingWidth="541.6328125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="getElements" layoutX="489.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleGetElements" prefHeight="39.0" prefWidth="41.0" text="&gt;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Text fill="#7c7676" layoutX="218.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ZASOBY Z BAZY DANYCH">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#7c7676" layoutX="542.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WYBRANE ZASOBY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="removeElements" layoutX="489.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleRemoveElements" prefHeight="39.0" prefWidth="41.0" text="&lt;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="fifthStage" layoutY="249.0" mnemonicParsing="false" onAction="#handleFifthStage" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Podatności elementów na zagrożenia" textFill="WHITE" />
+            <Button fx:id="fourthStage" layoutY="195.0" mnemonicParsing="false" onAction="#handleFourthStage" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Wybór zabezpieczeń" textFill="WHITE" />
+            <Button fx:id="sixthStage" layoutY="301.0" mnemonicParsing="false" onAction="#handleSisthStage" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #8bc52d;" text="Generacja Raportu" textFill="WHITE" />
+            <Button fx:id="nextStage" layoutX="542.0" layoutY="510.0" mnemonicParsing="false" onAction="#handleNextStage" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #8bc52d;" text="Zatwierdź zasoby" textFill="WHITE" />
+            <Button fx:id="firstStage" layoutY="49.0" mnemonicParsing="false" onAction="#handleFirstStage" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #7c7676;" text="Wybór zasobów" textFill="WHITE" />
+            <ListView fx:id="everySystemElement" layoutX="218.0" layoutY="149.0" prefHeight="340.0" prefWidth="262.0" />
+            <ListView fx:id="mySystemElements" layoutX="542.0" layoutY="149.0" prefHeight="340.0" prefWidth="262.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
